@@ -1,0 +1,25 @@
+command npm install in terminal it will install all the files 
+it will generate a node module file 
+
+to create a router use router.get() method
+
+router.get("/users",getAllUsers);  
+
+and don't forget to add getAllUsers one in 
+
+const{ getUserById, getUser , getAllUsers }=require("../controllers/user")
+
+otherwise it shows error
+
+write some code in controller too
+
+exports.getAllUsers=(req,res)=>{
+    User.find().exec((err,users)=>{
+        if(err || !users){
+            return res.status(400).json({
+                error:"No users found"
+            });
+        }
+        res.json(users);
+    });
+};

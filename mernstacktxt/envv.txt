@@ -1,0 +1,5 @@
+// format to save ==.>>   .env
+
+
+DATABASES=mongodb://localhost:27017/t-shirt
+SECRET=learncodeonline
